@@ -2,14 +2,90 @@
     margin:0;
     padding:0;
 }
+
 html{
     overflow-x: hidden;
 }
+
 li{
     list-style-type: none;
 }
+
+.bg{
+    background: url(../images/bg.jpg)
+}
+
+.bg_square{
+    background: url(../images/square.png)
+}
+
 .mt20{
     margin-top:20px;
+}
+
+.top_bar{
+    background: #5a58db !important;
+    height: 54px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.panel{
+    border: none;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+
+.panel-main{
+    margin-top: 54px;
+}
+
+.panel-body{
+    padding-bottom: 19px;
+}
+
+.help_icon{
+    display: inline-block;
+    min-width: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.top_title{
+    color: #FFF;
+    font-size: 27px;
+}
+
+.tool_red{
+    color: #FFF;
+    background-color: #db5a58;
+}
+
+.tool_blue{
+    color: #FFF;
+    background-color: #58b2db;
+}
+
+.tool_purple{
+    color: #FFF;
+    background: #aeb4ff;
+}
+
+.tool_green{
+    color: #FFF;
+    background-color: #1bc453;
+}
+
+.tool_yellow{
+    color: #FFF;
+    background-color: #ca7411;
 }
 
 #show_box{
@@ -19,11 +95,32 @@ li{
 #tools_box{
     width:300px;
     height: auto;
-    background:#666;
+    background:rgb(121, 130, 156);
     position: absolute;
     display: none;
     overflow: hidden;
     z-index: 1000;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 6px #666;
+    top: 2px;
+    left: 2px;
+}
+
+#tools_box li{
+    margin: 0 auto;
+    border-radius: 8px;
+    height: 50px;
+    width: 200px;
+    background: red;
+}
+
+#tools_box hr{
+    border-top: 1px solid #999;
+}
+
+.tools_title{
+    color: #FFF;
+    padding: 10px 0 0 20px;
 }
 
 #work_box{
@@ -84,24 +181,55 @@ li{
 .active_tool{
     border-radius: 8px;
     box-shadow: 0px 0px 3px rgb(235, 89, 89);
-    border:2px solid #FFF;
+    border: 2px solid #FFF;
 }
 
 .group_box .active_tool{
     border-radius: 8px;
     box-shadow: 0px 0px 3px #FFF;
-    border:2px solid #FFF;
+    border: 2px solid #FFF;
+}
+
+.bg_blue:hover{
+    background: #96d8ff;
+}
+
+.bg_red:hover{
+    background: #fdb0af;
+}
+
+#close_tools_box{
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    color: #bbdeff;
+    right: 18px;
+}
+
+#close_tools_box:hover{
+    color: #FFF;
+    cursor: pointer;
+}
+
+#group_tool_bar{
+    width: 30px;
+    height: 64px;
+    position: absolute;
+    z-index: 200;
+    background: #dae8fd;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #58b2db;
+    display: none;
 }
 
 .tool{
-    margin:0px auto;
+    margin: 0px auto;
     width: 200px;
     height: 50px;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 50px;
     padding-left:14px;
-    background: #aeb4ff;
-    color: #FFF;
     cursor: move;
     border-radius: 5px;
     box-shadow: 0 0 2px #000;
@@ -127,9 +255,18 @@ li{
 
 .input_sm{
     text-align: center;
-    font-size: 18px;
-    width: 50px;
+    font-size: 14px;
+    width: 54px;
+    height: 24px;
 }
+
+.input_lg{
+    text-align: center;
+    font-size: 14px;
+    width: 104px;
+    height: 24px;
+}
+
 .inline{
     display: inline;
 }

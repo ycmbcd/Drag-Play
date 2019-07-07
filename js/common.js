@@ -44,6 +44,7 @@ function mouse_move(id, event) {
         $('#' + id).css({ "left": new_x, "top": new_y });
         drag_next(id, event);   // 计算是否超出工作区
         if ($('#' + id).parent().hasClass('group_box')) {   // 判断是否在组中
+            $('#group_tool_bar').hide();    // 移动中隐藏组工具bar
             check_break(id, event);    // 在组中，拆分组件操作，及整组拖拽
         } else {
             check_common(id);   // 不再组中，合并操作
@@ -121,7 +122,7 @@ function add_group(id, group_id, item_arr) {
 function common_group(id, item_arr) {
     var now_group = 'g' + Date.parse(new Date());
 
-    $('#work_box').append('<div onmouseover="add_active(\'' + now_group + '\')" \
+    $('#work_box').append('<div onmouseover="add_active(\'' + now_group + '\'), group_tool(\'' + now_group + '\')" \
                             onmouseout="remove_active(\''+ now_group + '\')" \
                             class="group_box can_common" id="' + now_group + '"></div>');
     // 排序

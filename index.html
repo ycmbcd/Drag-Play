@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
@@ -10,107 +10,169 @@
     <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
     <!-- 自定义 css -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Drag-Play</h3>
+    <div class="panel-heading head top_bar navbar-fixed-top">
+        <div class="pull-left">
+            <h3 class="panel-title top_title"><i class="fa fa-puzzle-piece fa-fw"></i> Drag-Play</h3>
         </div>
+        <div class="pull-right">
+            <button data-toggle="modal" data-target="#help_panel" class="btn btn-default" type="button">
+                <span class="help_icon"><svg t="1562510591492" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="9235" width="18" height="18">
+                        <path
+                            d="M512 81.408a422.4 422.4 0 1 0 422.4 422.4A422.4 422.4 0 0 0 512 81.408z m26.624 629.76a45.056 45.056 0 0 1-31.232 12.288 42.496 42.496 0 0 1-31.232-12.8 41.984 41.984 0 0 1-12.8-30.72 39.424 39.424 0 0 1 12.8-30.72 42.496 42.496 0 0 1 31.232-12.288 43.008 43.008 0 0 1 31.744 12.288 39.424 39.424 0 0 1 12.8 30.72 43.008 43.008 0 0 1-13.312 31.744z m87.04-235.52a617.472 617.472 0 0 1-51.2 47.104 93.184 93.184 0 0 0-25.088 31.232 80.896 80.896 0 0 0-9.728 39.936v10.24H475.648v-10.24a119.808 119.808 0 0 1 12.288-57.344A311.296 311.296 0 0 1 555.52 460.8l10.24-11.264a71.168 71.168 0 0 0 16.896-44.032A69.632 69.632 0 0 0 563.2 358.4a69.632 69.632 0 0 0-51.2-17.92 67.072 67.072 0 0 0-58.88 26.112 102.4 102.4 0 0 0-16.384 61.44h-61.44a140.288 140.288 0 0 1 37.888-102.4 140.8 140.8 0 0 1 104.96-38.4 135.68 135.68 0 0 1 96.256 29.184 108.032 108.032 0 0 1 36.352 86.528 116.736 116.736 0 0 1-25.088 73.216z"
+                            fill="#1296db" p-id="9236"></path>
+                    </svg></span> 使用帮助
+            </button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel panel-default panel-main bg">
         <div class="panel-body">
-            <div class="col-lg-3 well" id="show_box">
-
-            </div>
+            <div class="col-lg-3 well" id="show_box"></div>
             <div class="col-lg-2">
                 <ul class="list-group">
-                    <li class="list-group-item pointer list-group-item-success" onclick="get_tools(1)">组件一</li>
-                    <li class="list-group-item pointer list-group-item-info" onclick="get_tools(2)">组件二</li>
-                    <li class="list-group-item pointer list-group-item-warning" onclick="get_tools(3)">组件三</li>
-                    <li class="list-group-item pointer list-group-item-danger" onclick="get_tools(4)">组件四</li>
+                    <li class="list-group-item pointer list-group-item-success" onclick="get_tools(1)">
+                        <i class="fa fa-fw fa-calculator"></i>
+                        简单计算
+                    </li>
+                    <li class="list-group-item pointer list-group-item-info" onclick="get_tools(2)">
+                        <i class="fa fa-fw fa-font"></i>
+                        字符拼接
+                    </li>
+                    <li class="list-group-item pointer list-group-item-warning" onclick="get_tools(3)">
+                        <i class="fa fa-fw fa-random"></i>
+                        逻辑比较
+                    </li>
+                    <li class="list-group-item pointer list-group-item-danger" onclick="get_tools(4)">
+                        <i class="fa fa-fw fa-paint-brush"></i>
+                        颜色筛选
+                    </li>
                 </ul>
             </div>
 
             <div class="col-lg-7 right_box">
-                <div id="tools_box">
+                <div id="tools_box"></div>
 
-                </div>
-                <div class="well" id="work_box" onclick="remove_tools()">
+                <div class="well bg_square" id="work_box" onclick="remove_tools()">
                     <!-- 参考线 -->
                     <div class="line_x" id="line_x1"></div>
                     <div class="line_x" id="line_x2"></div>
                     <div class="line_y" id="line_y1"></div>
                     <div class="line_y" id="line_y2"></div>
+                    <!-- 组工具 -->
+                    <div id="group_tool_bar">
+                        <input type="hidden" id="tool_bar_id">
+                        <div onclick="tool_bar('run')" class="pointer bg_blue">
+                            <svg t="1562498290630" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="8042" width="26" height="26">
+                                <path
+                                    d="M512 853.333333c-187.733333 0-341.333333-153.6-341.333333-341.333333s153.6-341.333333 341.333333-341.333333 341.333333 153.6 341.333333 341.333333-153.6 341.333333-341.333333 341.333333z m0-85.333333c140.8 0 256-115.2 256-256s-115.2-256-256-256-256 115.2-256 256 115.2 256 256 256z m128-256l-213.333333 128V384l213.333333 128z"
+                                    fill="#666" p-id="8043"></path>
+                            </svg>
+                        </div>
+                        <div onclick="tool_bar('del')" class="pointer bg_red">
+                            <svg t="1562498402770" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="8223" width="26" height="26">
+                                <path
+                                    d="M256 298.666667h512v554.666666H256V298.666667z m85.333333 85.333333v384h341.333334V384H341.333333z m42.666667 85.333333h85.333333v213.333334H384v-213.333334z m170.666667 0h85.333333v213.333334h-85.333333v-213.333334zM213.333333 298.666667h597.333334v85.333333H213.333333V298.666667z m170.666667-128h256v85.333333H384V170.666667z"
+                                    fill="#666" p-id="8224"></path>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <ul id="tools_1" class="hidden">
-        <br>
-        <li draggable="true" ondragend="drop_end('0',event)">
-            <div class="tool">
-                <span>乘法</span> <input type="number" class="form-control input_sm inline" placeholder="0"> × <input type="number" class="form-control input_sm inline" placeholder="0">
+        <h4 class="tools_title"><i class="fa fa-fw fa-calculator"></i> 简单计算</h4>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_1', '0' ,event)">
+            <div class="tool tool_blue">
+                <span>加法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
+                    placeholder="0">&nbsp;＋&nbsp; <input type="text" class="form-control input_sm inline"
+                    placeholder="0">
             </div>
         </li>
         <hr>
-        <li draggable="true" ondragend="drop_end('1',event)">
-            <div class="tool">
-                2222222
+        <li draggable="true" ondragend="drop_end('tools_1', '1', event)">
+            <div class="tool tool_red">
+                <span>减法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
+                    placeholder="0">&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
+                    placeholder="0">
             </div>
         </li>
         <hr>
-        <li draggable="true" ondragend="drop_end('2',event)">
-            <div class="tool">
-                333333
+        <li draggable="true" ondragend="drop_end('tools_1', '2', event)">
+            <div class="tool tool_green">
+                <span>乘法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
+                    placeholder="0">&nbsp;&nbsp;×&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
+                    placeholder="0">
             </div>
         </li>
         <hr>
-        <li draggable="true" ondragend="drop_end('3',event)">
-            <div class="tool">
-                444444
+        <li draggable="true" ondragend="drop_end('tools_1', '3', event)">
+            <div class="tool tool_yellow">
+                <span>除法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
+                    placeholder="0">&nbsp;&nbsp;÷&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
+                    placeholder="0">
             </div>
         </li>
         <br>
     </ul>
-    <div id="tools_2" class="hidden">
-        <br>
-        <li draggable="true" ondragend="drop_end('0',event)">
-            <div class="tool">
-                ddd
+    <ul id="tools_2" class="hidden">
+        <h4 class="tools_title"><i class="fa fa-fw fa-font"></i> 字符拼接</h4>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_2', '0', event)">
+            <div class="tool tool_blue" data-method="max_txt">
+                <span>大文字</span>&nbsp;&nbsp;<input type="text" class="form-control input_lg inline" placeholder="请输入">
             </div>
         </li>
         <hr>
-        <li draggable="true" ondragend="drop_end('1',event)">
-            <div class="tool">
-                eee
+        <li draggable="true" ondragend="drop_end('tools_2', '1', event)">
+            <div class="tool tool_red" data-method="min_txt">
+                <span>小文字</span>&nbsp;&nbsp;<input type="text" class="form-control input_lg inline" placeholder="请输入">
             </div>
         </li>
         <br>
-    </div>
-    <div id="tools_3" class="hidden">
-        <br>
-        <li draggable="true" ondragend="drop_end('0',event)">
-            <div class="tool">
-                ddd
-            </div>
-        </li>
-        <br>
-    </div>
-    <div id="tools_4" class="hidden">
-        <br>
-        <li draggable="true" ondragend="drop_end('0',event)">
-            <div class="tool">
-                ddd
+    </ul>
+    <ul id="tools_3" class="hidden">
+        <h4 class="tools_title"><i class="fa fa-fw fa-random"></i> 逻辑比较</h4>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_3','0',event)">
+            <div class="tool tool_blue">
+                1 > 2
             </div>
         </li>
         <hr>
-        <li draggable="true" ondragend="drop_end('1',event)">
-            <div class="tool">
-                eee
+        <li draggable="true" ondragend="drop_end('tools_3','1',event)">
+            <div class="tool tool_blue">
+                如果为 true/false 执行
             </div>
         </li>
         <br>
-    </div>
+    </ul>
+    <ul id="tools_4" class="hidden">
+        <h4 class="tools_title"><i class="fa fa-fw fa-paint-brush"></i> 颜色筛选</h4>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_4','0',event)">
+            <div class="tool tool_yellow">
+                组件四 的 工具1
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_4','1',event)">
+            <div class="tool tool_green">
+                组件四 的 工具2
+            </div>
+        </li>
+        <br>
+    </ul>
 
     <!-- 删除警告 -->
     <input type="hidden" id="del_id">
@@ -124,9 +186,25 @@
                     <h4 class="modal-title">是否要删除该组件？</h4>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" onclick="del_tool_no()" data-dismiss="modal">取
-                        消</button>
+                    <button type="button" class="btn btn-default" onclick="del_tool_no()" data-dismiss="modal">取 消</button>
                     <button type="button" class="btn btn-danger" onclick="del_tool_yes();">删 除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 帮助 -->
+    <div id="help_panel" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+        aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Drag-Play 使用帮助</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关 闭</button>
                 </div>
             </div>
         </div>
@@ -149,3 +227,5 @@
 <script src="./js/common.js"></script>
 <!-- 自定义参考线js -->
 <script src="./js/line.js"></script>
+<!-- 工具功能实现js -->
+<script src="./js/tool_make.js"></script>
