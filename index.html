@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag-Play</title>
+    <!-- bootstrap v3.3.7 -->
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
+    <!-- 自定义 css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Drag-Play</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-3 well" id="show_box">
+
+            </div>
+            <div class="col-lg-2">
+                <ul class="list-group">
+                    <li class="list-group-item pointer list-group-item-success" onclick="get_tools(1)">组件一</li>
+                    <li class="list-group-item pointer list-group-item-info" onclick="get_tools(2)">组件二</li>
+                    <li class="list-group-item pointer list-group-item-warning" onclick="get_tools(3)">组件三</li>
+                    <li class="list-group-item pointer list-group-item-danger" onclick="get_tools(4)">组件四</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-7 right_box">
+                <div id="tools_box">
+
+                </div>
+                <div class="well" id="work_box" onclick="remove_tools()">
+                    <!-- 参考线 -->
+                    <div class="line_x" id="line_x1"></div>
+                    <div class="line_x" id="line_x2"></div>
+                    <div class="line_y" id="line_y1"></div>
+                    <div class="line_y" id="line_y2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul id="tools_1" class="hidden">
+        <br>
+        <li draggable="true" ondragend="drop_end('0',event)">
+            <div class="tool">
+                <span>乘法</span> <input type="number" class="form-control input_sm inline" placeholder="0"> × <input type="number" class="form-control input_sm inline" placeholder="0">
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('1',event)">
+            <div class="tool">
+                2222222
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('2',event)">
+            <div class="tool">
+                333333
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('3',event)">
+            <div class="tool">
+                444444
+            </div>
+        </li>
+        <br>
+    </ul>
+    <div id="tools_2" class="hidden">
+        <br>
+        <li draggable="true" ondragend="drop_end('0',event)">
+            <div class="tool">
+                ddd
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('1',event)">
+            <div class="tool">
+                eee
+            </div>
+        </li>
+        <br>
+    </div>
+    <div id="tools_3" class="hidden">
+        <br>
+        <li draggable="true" ondragend="drop_end('0',event)">
+            <div class="tool">
+                ddd
+            </div>
+        </li>
+        <br>
+    </div>
+    <div id="tools_4" class="hidden">
+        <br>
+        <li draggable="true" ondragend="drop_end('0',event)">
+            <div class="tool">
+                ddd
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('1',event)">
+            <div class="tool">
+                eee
+            </div>
+        </li>
+        <br>
+    </div>
+
+    <!-- 删除警告 -->
+    <input type="hidden" id="del_id">
+    <div id="del_tool" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+        aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">是否要删除该组件？</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="del_tool_no()" data-dismiss="modal">取
+                        消</button>
+                    <button type="button" class="btn btn-danger" onclick="del_tool_yes();">删 除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 堆叠超出警告 -->
+    <div id="alert_error">
+        演示最多仅支持2个模块互相堆叠
+    </div>
+</body>
+
+</html>
+<!-- jQuery v1.7.2 -->
+<script src="./js/jquery.min.js"></script>
+<!-- bootstrap v3.37 -->
+<script src="./lib/bootstrap/bootstrap.min.js"></script>
+<!-- 自定义拖拽js -->
+<script src="./js/drag.js"></script>
+<!-- 自定义吸附合并js -->
+<script src="./js/common.js"></script>
+<!-- 自定义参考线js -->
+<script src="./js/line.js"></script>
