@@ -146,13 +146,36 @@
         <hr>
         <li draggable="true" ondragend="drop_end('tools_3','0',event)">
             <div class="tool tool_blue">
-                1 > 2
+                <input type="text" class="form-control input_sm inline" placeholder="数字">
+                <div class="dropdown tool_dropdown" style="display: inline">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tool_drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="dropdown_val">＞</span>
+                      <span class="caret"></span>
+                    </button>
+                    <dl class="dropdown-menu" aria-labelledby="tool_drop1">
+                        <dd onclick="b_dropdown(this)"><div class="drop_item">＞</div></dd>
+                        <dd onclick="b_dropdown(this)"><div class="drop_item">＜</div></dd>
+                        <dd onclick="b_dropdown(this)"><div class="drop_item">＝</div></dd>
+                    </dl>
+                  </div>
+                <input type="text" class="form-control input_sm inline" placeholder="数字">
             </div>
         </li>
         <hr>
         <li draggable="true" ondragend="drop_end('tools_3','1',event)">
-            <div class="tool tool_blue">
-                如果为 true/false 执行
+            <div class="tool tool_red">
+                <div class="dropdown tool_dropdown" style="display: inline">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tool_drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="dropdown_val">正确</span>
+                      <span class="caret"></span>
+                    </button>
+                    <dl class="dropdown-menu" aria-labelledby="tool_drop1">
+                        <dd onclick="b_dropdown(this)"><div class="drop_item">正确</div></dd>
+                        <dd onclick="b_dropdown(this)"><div class="drop_item">错误</div></dd>
+                    </dl>
+                  </div>
+                  <span>则：</span>
+                <input type="text" class="form-control input_sm inline" placeholder="状态">
             </div>
         </li>
         <br>
@@ -218,7 +241,7 @@
 
 </html>
 <!-- jQuery v1.7.2 -->
-<script src="./js/jquery.min.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
 <!-- bootstrap v3.37 -->
 <script src="./lib/bootstrap/bootstrap.min.js"></script>
 <!-- 自定义拖拽js -->

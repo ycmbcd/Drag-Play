@@ -12,6 +12,12 @@ function cal_height(){
     }, 1000)
 }
 
+// bootstrap 下拉选中
+function b_dropdown(_this){
+    var val = $(_this).find('.drop_item').text();
+    $(_this).parents('.dropdown').find('.dropdown_val').text(val);
+}
+
 // tool hover标记
 function add_active(id){
     $('#' + id).addClass('active_tool');

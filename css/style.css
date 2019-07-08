@@ -30,6 +30,54 @@ li{
     border-top-right-radius: 0px;
 }
 
+.dropdown{
+    display: inline;
+}
+
+.dropdown-menu{
+    min-width: auto;
+    left: 0;
+    padding: 2px;
+    background: #FFF;
+}
+
+.dropdown-menu dl:first-child{
+    border-bottom: 1px solid #dedede;
+}
+
+.dropdown-menu dl{
+    margin-bottom: 0;
+}
+
+.dropdown-menu dd{
+    color: #666666;
+    background: #ffffff;
+    padding: 10px 14px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.dropdown-menu dd:hover{
+    background: #58b2db;
+    color: #FFF;
+}
+
+.tool_dropdown .btn{
+    height: 24px;
+    margin-top: -1px;
+    line-height: 0;
+}
+
+.modal-open{
+    /* 解决 bootstrap 模态框出现右侧边距bug */
+    padding-right: 0 !important;
+}
+
+.btn-default.focus, .btn-default:focus {
+    /* 解决 bootstrap 按钮焦距点击后产生的背景色 */
+    background-color: #FFF;
+}
+
 .panel{
     border: none;
     border-radius: 0px;
