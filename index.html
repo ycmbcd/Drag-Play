@@ -37,12 +37,12 @@
             <div class="col-lg-2">
                 <ul class="list-group">
                     <li class="list-group-item pointer list-group-item-success" onclick="get_tools(1)">
-                        <i class="fa fa-fw fa-calculator"></i>
-                        简单计算
-                    </li>
-                    <li class="list-group-item pointer list-group-item-info" onclick="get_tools(2)">
                         <i class="fa fa-fw fa-font"></i>
                         字符拼接
+                    </li>
+                    <li class="list-group-item pointer list-group-item-info" onclick="get_tools(2)">
+                        <i class="fa fa-fw fa-calculator"></i>
+                        简单计算
                     </li>
                     <li class="list-group-item pointer list-group-item-warning" onclick="get_tools(3)">
                         <i class="fa fa-fw fa-random"></i>
@@ -88,28 +88,45 @@
             </div>
         </div>
     </div>
-
+    <!-- tools_1 -->
     <ul id="tools_1" class="hidden">
+        <h4 class="tools_title"><i class="fa fa-fw fa-font"></i> 字符拼接</h4>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_1', '0', event)">
+            <div class="tool tool_blue" data-method="max_txt">
+                <span>大文字</span>&nbsp;&nbsp;<input type="text" class="form-control input_lg inline" placeholder="请输入">
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_1', '1', event)">
+            <div class="tool tool_red" data-method="min_txt">
+                <span>小文字</span>&nbsp;&nbsp;<input type="text" class="form-control input_lg inline" placeholder="请输入">
+            </div>
+        </li>
+        <br>
+    </ul>
+    <!-- tools_2 -->
+    <ul id="tools_2" class="hidden">
         <h4 class="tools_title"><i class="fa fa-fw fa-calculator"></i> 简单计算</h4>
         <hr>
-        <li draggable="true" ondragend="drop_end('tools_1', '0' ,event)">
-            <div class="tool tool_blue">
+        <li draggable="true" ondragend="drop_end('tools_2', '0' ,event)">
+            <div class="tool tool_blue" data-method="not_run">
                 <span>加法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
                     placeholder="0">&nbsp;＋&nbsp; <input type="text" class="form-control input_sm inline"
                     placeholder="0">
             </div>
         </li>
         <hr>
-        <li draggable="true" ondragend="drop_end('tools_1', '1', event)">
-            <div class="tool tool_red">
+        <li draggable="true" ondragend="drop_end('tools_2', '1', event)">
+            <div class="tool tool_red" data-method="not_run">
                 <span>减法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
                     placeholder="0">&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
                     placeholder="0">
             </div>
         </li>
         <hr>
-        <li draggable="true" ondragend="drop_end('tools_1', '2', event)">
-            <div class="tool tool_green">
+        <li draggable="true" ondragend="drop_end('tools_2', '2', event)">
+            <div class="tool tool_green" data-method="not_run">
                 <span>乘法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
                     placeholder="0">&nbsp;&nbsp;×&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
                     placeholder="0">
@@ -117,7 +134,7 @@
         </li>
         <hr>
         <li draggable="true" ondragend="drop_end('tools_1', '3', event)">
-            <div class="tool tool_yellow">
+            <div class="tool tool_yellow" data-method="not_run">
                 <span>除法</span>&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
                     placeholder="0">&nbsp;&nbsp;÷&nbsp;&nbsp;<input type="text" class="form-control input_sm inline"
                     placeholder="0">
@@ -125,72 +142,77 @@
         </li>
         <br>
     </ul>
-    <ul id="tools_2" class="hidden">
-        <h4 class="tools_title"><i class="fa fa-fw fa-font"></i> 字符拼接</h4>
-        <hr>
-        <li draggable="true" ondragend="drop_end('tools_2', '0', event)">
-            <div class="tool tool_blue" data-method="max_txt">
-                <span>大文字</span>&nbsp;&nbsp;<input type="text" class="form-control input_lg inline" placeholder="请输入">
-            </div>
-        </li>
-        <hr>
-        <li draggable="true" ondragend="drop_end('tools_2', '1', event)">
-            <div class="tool tool_red" data-method="min_txt">
-                <span>小文字</span>&nbsp;&nbsp;<input type="text" class="form-control input_lg inline" placeholder="请输入">
-            </div>
-        </li>
-        <br>
-    </ul>
+    <!-- tools_3 -->
     <ul id="tools_3" class="hidden">
         <h4 class="tools_title"><i class="fa fa-fw fa-random"></i> 逻辑比较</h4>
         <hr>
         <li draggable="true" ondragend="drop_end('tools_3','0',event)">
-            <div class="tool tool_blue">
+            <div class="tool tool_blue" data-method="not_run">
                 <input type="text" class="form-control input_sm inline" placeholder="数字">
                 <div class="dropdown tool_dropdown" style="display: inline">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="tool_drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <span class="dropdown_val">＞</span>
-                      <span class="caret"></span>
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tool_drop1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                        <span class="dropdown_val">＞</span>
+                        <span class="caret"></span>
                     </button>
                     <dl class="dropdown-menu" aria-labelledby="tool_drop1">
-                        <dd onclick="b_dropdown(this)"><div class="drop_item">＞</div></dd>
-                        <dd onclick="b_dropdown(this)"><div class="drop_item">＜</div></dd>
-                        <dd onclick="b_dropdown(this)"><div class="drop_item">＝</div></dd>
+                        <dd onclick="b_dropdown(this)">
+                            <div class="drop_item">＞</div>
+                        </dd>
+                        <dd onclick="b_dropdown(this)">
+                            <div class="drop_item">＜</div>
+                        </dd>
+                        <dd onclick="b_dropdown(this)">
+                            <div class="drop_item">＝</div>
+                        </dd>
                     </dl>
-                  </div>
+                </div>
                 <input type="text" class="form-control input_sm inline" placeholder="数字">
             </div>
         </li>
         <hr>
         <li draggable="true" ondragend="drop_end('tools_3','1',event)">
-            <div class="tool tool_red">
+            <div class="tool tool_red" data-method="not_run">
                 <div class="dropdown tool_dropdown" style="display: inline">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="tool_drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <span class="dropdown_val">正确</span>
-                      <span class="caret"></span>
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tool_drop1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                        <span class="dropdown_val">正确</span>
+                        <span class="caret"></span>
                     </button>
                     <dl class="dropdown-menu" aria-labelledby="tool_drop1">
-                        <dd onclick="b_dropdown(this)"><div class="drop_item">正确</div></dd>
-                        <dd onclick="b_dropdown(this)"><div class="drop_item">错误</div></dd>
+                        <dd onclick="b_dropdown(this)">
+                            <div class="drop_item">正确</div>
+                        </dd>
+                        <dd onclick="b_dropdown(this)">
+                            <div class="drop_item">错误</div>
+                        </dd>
                     </dl>
-                  </div>
-                  <span>则：</span>
+                </div>
+                <span> 则 </span>
+                <input type="text" class="form-control input_sm inline" placeholder="状态">
+            </div>
+        </li>
+        <hr>
+        <li draggable="true" ondragend="drop_end('tools_3','2',event)">
+            <div class="tool tool_green" data-method="not_run">
+                <span> 输出 </span>
                 <input type="text" class="form-control input_sm inline" placeholder="状态">
             </div>
         </li>
         <br>
     </ul>
+    <!-- tools_4 -->
     <ul id="tools_4" class="hidden">
         <h4 class="tools_title"><i class="fa fa-fw fa-paint-brush"></i> 颜色筛选</h4>
         <hr>
         <li draggable="true" ondragend="drop_end('tools_4','0',event)">
-            <div class="tool tool_yellow">
+            <div class="tool tool_yellow" data-method="not_run">
                 组件四 的 工具1
             </div>
         </li>
         <hr>
         <li draggable="true" ondragend="drop_end('tools_4','1',event)">
-            <div class="tool tool_green">
+            <div class="tool tool_green" data-method="not_run">
                 组件四 的 工具2
             </div>
         </li>
@@ -209,7 +231,8 @@
                     <h4 class="modal-title">是否要删除该组件？</h4>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" onclick="del_tool_no()" data-dismiss="modal">取 消</button>
+                    <button type="button" class="btn btn-default" onclick="del_tool_no()" data-dismiss="modal">取
+                        消</button>
                     <button type="button" class="btn btn-danger" onclick="del_tool_yes();">删 除</button>
                 </div>
             </div>
@@ -233,10 +256,8 @@
         </div>
     </div>
 
-    <!-- 堆叠超出警告 -->
-    <div id="alert_error">
-        演示最多仅支持2个模块互相堆叠
-    </div>
+    <!-- 警示框 -->
+    <div id="alert_error"></div>
 </body>
 
 </html>

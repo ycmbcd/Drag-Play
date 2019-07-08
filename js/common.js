@@ -112,7 +112,12 @@ function check_common(id) {
 
 // 往组里追加，演示忽略，这里弹窗警告演示
 function add_group(id, group_id, item_arr) {
-    $('#alert_error').fadeIn(500);
+    alert_error('演示最多仅支持2个模块互相堆叠');
+}
+
+// 警示框
+function alert_error(txt){
+    $('#alert_error').text(txt).fadeIn(500);
     setTimeout(function () {
         $('#alert_error').fadeOut(500);
     }, 4000)
