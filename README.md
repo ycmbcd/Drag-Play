@@ -24,27 +24,34 @@ Drag-Play 基于以下类库开发：
 
 ## 使用说明
 1、从工具栏中选择组件拖入右侧工作区。
+
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/2B0A60BEC485186AE12B7EA7E1EC468A.jpg)
 
 2、将一个组件贴近另一个组件下方，可以拼合成一个组。
+
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/636A8F65D41B80C5BF9770DDC6307583.jpg)
 
 3、点击组上悬浮工具中的运行按钮，演示效果将在左侧演示区逐步展示出来。
+
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/909745E6C8CA323353CCD122B01A8196.jpg)
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/19DD055BE0C5E79EF54F156B337A9B4F.jpg)
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/10BF608375F83DD3DED260B5E283AFFB.jpg)
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/825FF3DECCE11B0807507925A730BC5A.jpg)
 
 4、将组件/组拖到工作区边缘可以删除该组件/组。
+
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/8BE8C1185E5C43770A3CEEDA5DA21A4F.jpg)
 
 5、点击使用帮助，弹出帮助模态窗。
+
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/548F09A738641FFC87AEF18751D89987.jpg)
 
 6、警示框。
+
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/C87FA8D2296ED184E09D4812086123E2.jpg)
 
 7、响应式（该功能是基于鼠标动作实现，移动端只限布局展示）
+
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/9068A4E23F6483831BE4BED2DEF10CD6.jpg)
 
 ## 目录结构 & 文件说明
