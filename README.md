@@ -25,7 +25,7 @@ Drag-Play 基于以下类库开发： <br>
 [Font Awesome](https://fontawesome.com/v4.7.0/) v4.7.0
 
 ## 第三方插件
-本 Demo 未采用第三方功能插件，以下功能均为自己编写：
+本 Demo 未采用第三方功能插件，以下功能均为自己编写： <br>
 1、拖拽 <br>
 2、参考线 <br>
 3、吸附贴合 <br>
