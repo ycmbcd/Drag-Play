@@ -37,7 +37,7 @@ Drag-Play 基于以下类库开发：
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/8BE8C1185E5C43770A3CEEDA5DA21A4F.jpg)
 
 5、点击使用帮助，弹出帮助模态窗。
-![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/548F09A738641FFC87AEF18751D89987.jpg1)
+![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/548F09A738641FFC87AEF18751D89987.jpg)
 
 6、警示框。
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/C87FA8D2296ED184E09D4812086123E2.jpg)
@@ -46,18 +46,18 @@ Drag-Play 基于以下类库开发：
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/9068A4E23F6483831BE4BED2DEF10CD6.jpg)
 
 ## 目录结构 & 文件说明
-> /index.html ................. 入口文件
-/images ................. 资源图片
-/css/ ................. 层叠样式表文件夹
-/css/style.css ................. 层叠样式表
-/js/ ................. 自定义 JavaScript 文件夹
-/js/drag.js ................. 拖拽功能 Js 文件
-/js/common.js ................. 组拆分合并功能 Js 文件
-/js/line.js ................. 参考线功能 Js 文件
-/js/tool_make.js ................. 演示功能 Js 文件
-/lib/ ................. 依赖、第三方类库文件夹
-/lib/bootstrap/ .................. BootStrap 文件夹
-/lib/jquery/ ................. jQuery 文件夹
+> /index.html ................. 入口文件 <br>
+/images ................. 资源图片 <br>
+/css/ ................. 层叠样式表文件夹 <br>
+/css/style.css ................. 层叠样式表 <br>
+/js/ ................. 自定义 JavaScript 文件夹 <br>
+/js/drag.js ................. 拖拽功能 Js 文件 <br>
+/js/common.js ................. 组拆分合并功能 Js 文件 <br>
+/js/line.js ................. 参考线功能 Js 文件 <br>
+/js/tool_make.js ................. 演示功能 Js 文件 <br>
+/lib/ ................. 依赖、第三方类库文件夹 <br>
+/lib/bootstrap/ .................. BootStrap 文件夹 <br>
+/lib/jquery/ ................. jQuery 文件夹 <br>
 /lib/font-awesome/ ................. font-awesome 文件夹
 
 ## 开发者
