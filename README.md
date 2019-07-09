@@ -1,5 +1,11 @@
 > 欢迎使用Drag-Play（Demo），您可以进行简单的组件拼接，进行结果的演算。
 
+[![licenses](https://img.shields.io/github/license/ycmbcd/Drag-Play.svg?style=flat)](https://opensource.org/licenses/MIT)
+![size](https://img.shields.io/github/languages/code-size/ycmbcd/Drag-Play.svg?style=flat)
+[![release](https://img.shields.io/github/release/ycmbcd/Drag-Play.svg?style=flat)](https://github.com/ycmbcd/Drag-Play/releases)
+[![download](https://img.shields.io/badge/Downloads-click-brightgreen.svg)](https://github.com/ycmbcd/Drag-Play/releases)
+
+
 ## 项目地址
 [https://github.com/ycmbcd/Drag-Play](https://github.com/ycmbcd/Drag-Play)
 
