@@ -19,17 +19,17 @@
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/FA257553A65ECBBD1C41AAF88AB2F629.jpg)
 
 ## 项目基于
-Drag-Play 基于以下类库开发：
-[jQuery](https://github.com/jquery/jquery/releases/tag/3.4.1) v3.4.1
-[BootStrap](https://github.com/twbs/bootstrap/releases/tag/v3.3.7) v3.3.7
+Drag-Play 基于以下类库开发： <br>
+[jQuery](https://github.com/jquery/jquery/releases/tag/3.4.1) v3.4.1 <br>
+[BootStrap](https://github.com/twbs/bootstrap/releases/tag/v3.3.7) v3.3.7 <br>
 [Font Awesome](https://fontawesome.com/v4.7.0/) v4.7.0
 
 ## 第三方插件
 本 Demo 未采用第三方功能插件，以下功能均为自己编写：
-1、拖拽
-2、参考线
-3、吸附贴合
-4、逐步展示
+1、拖拽 <br>
+2、参考线 <br>
+3、吸附贴合 <br>
+4、逐步展示 <br>
 
 ## 使用说明
 1、从工具栏中选择组件拖入右侧工作区。
