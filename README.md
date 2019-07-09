@@ -25,8 +25,10 @@ Drag-Play 基于以下类库开发：
 ## 使用说明
 1、从工具栏中选择组件拖入右侧工作区。
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/2B0A60BEC485186AE12B7EA7E1EC468A.jpg)
+
 2、将一个组件贴近另一个组件下方，可以拼合成一个组。
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/636A8F65D41B80C5BF9770DDC6307583.jpg)
+
 3、点击组上悬浮工具中的运行按钮，演示效果将在左侧演示区逐步展示出来。
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/909745E6C8CA323353CCD122B01A8196.jpg)
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/19DD055BE0C5E79EF54F156B337A9B4F.jpg)
