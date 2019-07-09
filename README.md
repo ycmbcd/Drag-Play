@@ -7,7 +7,7 @@
 
 
 ## 项目地址
-[https://github.com/ycmbcd/Drag-Play](https://github.com/ycmbcd/Drag-Play)
+[https://github.com/ycmbcd/Drag-Play/](https://github.com/ycmbcd/Drag-Play)
 
 ## 演示地址（Demo）
 [https://www.ycmbcd.com/drag-play/](https://www.ycmbcd.com/drag-play/)
@@ -82,10 +82,10 @@ Drag-Play 基于以下类库开发：
 [ycmbcd](https://github.com/ycmbcd/)
 
 ## 开发环境
-操作系统：macOS High Sierra v10.13.5
-IDE编辑器：Visual Studio Code v1.35.1
-IDE编辑器插件：Bootstrap 3 Snippets, Live Server
-浏览器：Chrome v75.0.3770.100
+操作系统：macOS High Sierra v10.13.5 <br>
+IDE编辑器：Visual Studio Code v1.35.1 <br>
+IDE编辑器插件：Bootstrap 3 Snippets, Live Server <br>
+浏览器：Chrome v75.0.3770.100 <br>
 
 ## License
 [MIT](https://mit-license.org/)
