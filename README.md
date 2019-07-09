@@ -9,8 +9,11 @@
 ## 项目地址
 [https://github.com/ycmbcd/Drag-Play](https://github.com/ycmbcd/Drag-Play)
 
-## 演示（Demo）
+## 演示地址（Demo）
 [https://www.ycmbcd.com/drag-play/](https://www.ycmbcd.com/drag-play/)
+
+## 下载地址
+[https://github.com/ycmbcd/Drag-Play/releases/](https://github.com/ycmbcd/Drag-Play/releases/)
 
 ## 界面预览
 ![IMAGE](https://raw.githubusercontent.com/ycmbcd/images_repo/master/drag-play/resources/FA257553A65ECBBD1C41AAF88AB2F629.jpg)
